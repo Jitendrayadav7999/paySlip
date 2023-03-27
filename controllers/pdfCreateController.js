@@ -6,6 +6,7 @@ const { toWords } = require('../helper/numToWord')
 const {basic,HRA,DA} = require("../helper/salaryCal")
 
 const create = async (req, resp) => {
+    try {
     let {
         name,
         dateOfJoining,
@@ -115,5 +116,14 @@ const create = async (req, resp) => {
     };
     await pdf.create(document, options)
     resp.download(`./pdf/${fileName}`)
+    setTimeout(()=>{
+        fs.unlinkSync(`./pdf/${fileName}`);
+    },1000)
+   
+
+} catch (error) {
+       console.log(error) 
+       resp.status(500).send({success:false,message:"Something Is Wrong"})
+}
 }
 module.exports = { create }
