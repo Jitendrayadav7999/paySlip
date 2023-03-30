@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .root {
+            margin-top: 50px;
+            width: 950px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="root">
+        <table style="width: 948px; height: 120px; border-bottom: 2px solid black;  line-height: 5px;">
+            <tr>
+                <td>
+                <td> <img style="position: relative;  width: 200px;" src="https://webonex.in/assets/img/web_logo.png" />
+                </td>
+                <td style="  text-align: center; position: absolute; left: 360px;">
+                    <h2>Techstuff Pvt Ltd.</h2>
+                    <p>Srijan, Ground Floor, Crystal It Park</p>
+                    <p> Bhawar-Kuan Indore </p>
+                    <h2>Pay Slip for the period of <%=monthYear%>
+                    </h2>
+                </td>
+                </td>
+
+            </tr>
+        </table>
+        <table
+            style="width: 948px; box-sizing: border-box; padding: 200px; text-align: left; border-collapse: collapse; ">
+            <tr>
+
+                <td style="padding-left: 10px;">Name:</td>
+                <td colspan="2">
+                    <%=name%>
+                </td>
+                <td style="border-left: 2px solid black; padding-left: 10px;"> Employee No.</td>
+                <td colspan="2">
+                    <%=EmployeeNo%>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Date Of Joining:</td>
+                <td colspan="2">
+                    <%=dateOfJoining%>
+                </td>
+                <td style="border-left: 2px solid black; padding-left: 10px;"> Bank Name: </td>
+                <td colspan="2">
+                    <%=BankName%>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Designation:</td>
+                <td colspan="2">
+                    <%=Designation%>
+                </td>
+                <td style="border-left: 2px solid black; padding-left: 10px;">Bank Account No: </td>
+                <td colspan="2">
+                    <%=BankAccountNo%>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Department:</td>
+                <td colspan="2">
+                    <%=Department%>
+                </td>
+                <td style="border-left: 2px solid black; padding-left: 10px;">PAN Number:</td>
+                <td colspan="2">
+                    <%=PANNumber%>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Location:</td>
+                <td colspan="2">
+                    <%=Location%>
+                </td>
+                <td style="border-left: 2px solid black; padding-left: 10px;">PF No:</td>
+                <td colspan="2">
+                    <%=PFNo%>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">Effective Work Days: </td>
+                <td colspan="2">
+                    <%=EffectiveWorkDays%>
+                </td>
+                <td style="border-left: 2px solid black; padding-left: 10px;">PF UAN:</td>
+                <td colspan="2">
+                    <%=PFUAN%>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;">LOP: </td>
+                <td colspan="2">
+                    <%=LOP%>
+                </td>
+                <td style="border-left: 2px solid black; padding-left: 10px;"></td>
+                <td colspan="2"></td>
+            </tr>
+            <tr style="border-top: 2px solid black;  border-bottom: 2px solid black; padding: 10px;">
+                <th style="padding: 10px;">
+                    Earnings
+                </th>
+                <th>Full </th>
+                <th>
+                    Gross
+                </th>
+                <th style="border-left: 2px solid black; padding-left: 10px;">Deductions </th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;"> BASIC </td>
+                <td>
+                    <%=basicFull%>
+                </td>
+                <td>
+                    <%=basicGross%>
+                </td>
+                <td style="border-left: 2px solid black; padding-left: 10px;">PROFESSIONAL TAX</td>
+                <td>
+                    <%=pt%>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;"> DA </td>
+                <td>
+                    <%=daFull%>
+                </td>
+                <td>
+                    <%=daGross%>
+                </td>
+                <td style="border-left: 2px solid black; padding-left: 10px;"> INCOME TAX</td>
+                <td>
+                    <%=TDS%>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;"> HRA </td>
+                <td>
+                    <%=hraFull%>
+                </td>
+                <td>
+                    <%=hraGross%>
+                </td>
+                <td style="border-left: 2px solid black; padding-left: 10px;"> </td>
+                <td> </td>
+
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;"> Conveyance </td>
+                <td>
+                    <%=conveyanceFull%>
+                </td>
+                <td>
+                    <%=conveyanceGross%>
+                </td>
+                <td style="border-left: 2px solid black; padding-left: 10px;"> </td>
+                <td> </td>
+
+            </tr>
+            <tr style="border-top: 2px solid black;  border-bottom: 2px solid black;">
+                <th style="padding: 10px;">
+                    Total Earnings:INR.
+                </th>
+                <th>
+                    <%=totalEarningFull%>
+                </th>
+                <th>
+                    <%=totalEarningGross%>
+                </th>
+                <th style="border-left: 2px solid black; padding: 10px;">Total Deductions </th>
+                <th>
+                    <%=TotalDeductions%>
+                </th>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="12" style="padding-left: 10px;">
+                        <strong>
+                            Net Pay for the month ( Total Earnings - Total Deductions): <%=netPAy%>
+                        </strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="12" style="padding-top: 50px; font-family: 'Times New Roman', Times, serif;">
+                        <i>(Rupees <%=rupeesInEnglish%> Only)</i>
+                    </td>
+                </tr>
+            </tfoot>
+
+        </table>
+    </div>
+    <div style="text-align: center; ">
+        This is a system generated payslip and does not require signature.
+    </div>
+</body>
+
+</html>
